@@ -30,7 +30,7 @@ c.parentNode.insertBefore(cp, c); })(); </script><noscript><span>Das Schlüssell
 <center><h3> Eigentlich war die Sache noch schlimmer. </center>
 <center><h3> Ich selbst war nämlich bei den Studenten - </center>
 <center><h3> Doch lassen wir es dabei bewenden.) </center>
-</p>
+
 
 <style>h1 {
   text-shadow: 2px 2px 4px #282828;
