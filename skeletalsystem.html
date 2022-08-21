@@ -14,13 +14,17 @@
   </head>
 
   <body>
-     <div id="nav-placeholder"></div>
-
-<script>
-$(function(){
-  $("#nav-placeholder").load("navigation.html");
-});
-</script> 
+                <style>
+table { 
+  display: table;
+  border-collapse: separate;
+  border-spacing: 1px;
+  border-color: gray;
+}
+th, td {
+  padding: 5px;
+}
+</style>
     <center><table>
   <tr>
          <td><a href="anatomy.html"> <h5><font color="000000"><b>Anatomy & Physiology</b></h5></a>
@@ -32,6 +36,14 @@ $(function(){
       <td><a href="skeletalsystem.html"> <h5><font color="000000"><b>Skeletal System</b></h5></a>
  </td>   
   </tr></table>  </center>
+    
+     <div id="nav-placeholder"></div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("navigation.html");
+});
+</script> 
 <style>
 table { 
   display: table;
