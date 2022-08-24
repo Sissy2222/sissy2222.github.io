@@ -264,7 +264,7 @@ body {
   display: none;
   position: fixed;
   bottom: 10px;
-  right: 15px;
+  right: 10px;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -283,7 +283,7 @@ body {
 </head>
 <body>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><b>Back To The Top</b></button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><b>Back To Top</b></button>
 
 <script>
 //Get the button
@@ -293,7 +293,7 @@ var mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 170 || document.documentElement.scrollTop > 170) {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
