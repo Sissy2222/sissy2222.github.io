@@ -269,7 +269,7 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: orange;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -277,13 +277,13 @@ body {
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: #567;
 }
 </style>
 </head>
 <body>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back To The Top</button>
 
 <script>
 //Get the button
@@ -293,7 +293,7 @@ var mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
