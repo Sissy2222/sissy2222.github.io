@@ -303,7 +303,12 @@ function topFunction() {
 }
 </script>
   
-  <style>
+  
+  
+  
+  
+  
+   <style>
 #div1 {
   font-size:48px;
 }
@@ -311,9 +316,9 @@ function topFunction() {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-<div id="div1" class="fa"></div>
+<div id="div1" class="fa">
 
-<script>
+#myBtn 
 function hand() {
   var a;
   a = document.getElementById("div1");
@@ -327,7 +332,16 @@ function hand() {
 }
 hand();
 setInterval(hand, 2000);
-  var hand = document.getElementById("myBtn");
+</script>
+
+</style>
+</head>
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><b>Back To Top</b></button>
+
+<script>
+var mybutton = document.getElementById("myBtn");
 
 window.onscroll = function() {scrollFunction()};
 
@@ -335,7 +349,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     mybutton.style.display = "block";
   } else {
-    hand.style.display = "none";
+    mybutton.style.display = "none";
   }
 }
 function topFunction() {
@@ -343,7 +357,10 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
-
+  
+  
+  
+ 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
