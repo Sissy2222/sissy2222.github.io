@@ -48,7 +48,20 @@ $(function(){
   $("#nav-placeholder").load("navigation.html");
 });
 </script> 
-
+  <style>
+    .fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+    </style>
     <center><h4>What volume of <font color="MediumPurple">0.186 M</font color> H<sub>2</sub>SO<sub>4</sub> is needed to titrate <font color="#5982e2">34.2 mL</font color> of 
   <font color="LimeGreen">0.320 M</font color> NaOH in 
 the reaction?  <br><br> H<sub>2</sub>SO<sub>4 (aq)</sub> + 2 NaOH <sub>(aq)</sub>    &nbsp;<b>&rlhar;</b>&nbsp;    
