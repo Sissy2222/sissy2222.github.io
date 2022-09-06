@@ -49,10 +49,28 @@ $(function(){
   $("#nav-placeholder").load("navigation.html");
 });
 </script> 
-
+.fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+    
 <center><h4>What mass of solid NaCH<sub>3</sub>CO<sub>2</sub> (molar mass = 82.0 g/mol) should be added to 1.00 
 L of 0.350 M CH<sub>3</sub>CO<sub>2</sub>H to make a buffer of pH = 5.20?<br><br>(K<sub>a</sub> for CH<sub>3</sub>CO<sub>2</sub>H = 1.8 × 10<sup>-5</sup>)<br></h4>
 <br><br>
+  <center><h3>When working with buffers, we want to employ the Henderson-Hasselback Equation<br>
+    <div class="eq-c">
+      pH = pK<sub>a</sub> + log <div class="fraction"><span class="fup">[A]</span><span class="bar">/</span> <span class="fdn">[HA]</span></div>
+    
+  </h3></center> 
+  
 <center><img src="./images/NaCH3CO2plusCH3CO2Hbuffersolution.jpg" alt="calculating pH of hydronium ion concentration" 
              hspace="7" style="width:1300px;height:800px;border:0"></center>
 
