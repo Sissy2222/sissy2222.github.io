@@ -27,7 +27,7 @@ $(function(){
   <br><br><br>
     
 <center><form method="post" name="contact_form"
-action="contact-form-handler.php">
+action="email.php">
     Your Name:
     <input type="text" name="name">
 
@@ -47,11 +47,7 @@ frmvalidator.addValidation("email","req","Please provide your email");
 frmvalidator.addValidation("email","email",
   "Please enter a valid email address");
 </script>
-<script>
-$(function(){
-  $("#email-placeholder").load("email.php");
-});
-</script>   
+   
 
  
  
