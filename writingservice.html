@@ -38,29 +38,17 @@ $('#gform').on('submit', function(e) {
  <center><form name="gform" id="gform" 
        enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdaQWV-FqCSF1lLPK-ppfjIW1e0mbsTi2vAfftW5lCaprgnJg/formResponse?" 
        target="hidden_iframe" onsubmit="submitted=true;">
-  <div class="input-group mb-3">
-  <center><span class="input-group-text"><center>Your Name</center></span>
- <input type="text" name="entry.1958451396" id="entry.1958451396"></center>
-    </div><br>
-   <div class="input-group mb-3">
-  <center><span class="input-group-text"><center>Your Email &/or Phone Number</center></span>
- <input type="text" name="entry.1905692442" id="entry.1905692442"></center>
-    </div><br>
-   <div class="input-group mb-3">
-  <center><span class="input-group-text">Academic Subject(s)</span>
- <input type="text" name="entry.92312694" id="entry.92312694"></center>
-    </div><br>
-   <div class="input-group mb-3">
-  <center><span class="input-group-text">Preferred Day/Time</span>
- <input type="text" name="entry.1760755617" id="entry.1760755617"></center>
-    </div><br>
-   
-   <div class="input-group mb-3">
-  <center><span class="input-group-text">Additional Comments</span>
- <input type="text" name="entry.264056354" id="entry.264056354"></center>
-    </div><br>
-   
-  <input type="submit" value="Submit">
+   Your Name<br>
+  <input type="text" name="entry.1958451396" id="entry.1958451396"><br><br>
+  Your Email &/or Phone Number<br>
+  <input type="text" name="entry.1905692442" id="entry.1905692442"><br><br>
+   Academic Subject(s)<br>
+   <input type="text" name="entry.92312694" id="entry.92312694"><br><br>
+   Preferred Day/Time<br>
+   <input type="text" name="entry.1760755617" id="entry.1760755617"><br><br>
+   Comments<br>
+   <input type="text" textarea name="message" rows="10" cols="30" name="entry.264056354" id="entry.264056354"><br><br>
+    <input type="submit" value="Submit">
    </form></center>
    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
     </center>
