@@ -25,7 +25,16 @@ $(function(){
     <center><font color="FFFFFF"><h1><u>!!!Page Under Construction!!!</u></h1></font color></center><br><br>
 
   <br><br><br>
-    
+ 
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Many Thanks... I'll get back with you shortly');
+  });
+</script>  
  <form name="gform" id="gform" 
        enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdaQWV-FqCSF1lLPK-ppfjIW1e0mbsTi2vAfftW5lCaprgnJg/formResponse?" 
        target="hidden_iframe" onsubmit="submitted=true;">
@@ -42,15 +51,7 @@ $(function(){
   <input type="submit" value="Submit">
 </form>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Many Thanks... I'll get back with you shortly');
-  });
-</script>
+
  
  
     
