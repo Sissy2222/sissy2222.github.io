@@ -187,13 +187,9 @@ border="0" width="240" height="120"  alt="animated-dog-image-0342"/></a><br><h4>
       </div>
       <div class="modal-body">
         
-     <script>
-        function fun(){
-            document.getElementById('entry.1271877426').value='';
-            document.getElementById('entry.15336561').value='';
-            document.getElementById('entry.1296284450').value='';
-            }
-    </script>   
+   
+        
+        
         
         <style>
 .bg {
@@ -216,15 +212,28 @@ border="0" width="240" height="120"  alt="animated-dog-image-0342"/></a><br><h4>
    <h3><b>Questions? Suggestions!</b></h3>
      <textarea rows="3" cols="35" name="entry.1296284450" id="entry.1296284450"></textarea><br><br>
    
-   <input  type="submit" value="Submit">
+   <button id="btn" type="submit">Submit</button>
+   
     
    </form></center>
+   
+   <script src="index.js"></script>
+   
    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
     </center>
     </td></tr>
     </table></center>  
         
-        
+   const form = document.getElementById('gform');
+
+form.addEventListener('submit', function handleSubmit(event) {
+  event.preventDefault();
+
+  // 👇️ Send data to server here
+
+  // 👇️ Reset form here
+  form.reset();
+});     
         
       
    </div>
