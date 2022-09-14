@@ -36,18 +36,25 @@ $('#gform').on('submit', function(e) {
   });
 </script> 
    
-   p {
-  font-size: 1.5em;
-  color: #000000;
-  background-image: none;
-  background-color: transparent;
-}
-
-div {
-  background-image: url("./images/orangestickynote.jpg");
-}
-
- <div>  
+<style>
+.bg {
+  width: 1300px;
+    height: 500px;
+  background-image: url(./images/orangestickynote.jpg);
+  background-size:100% 100%;
+  color:white;
+}  
+    </style> 
+  <center><table class="bg">
+ <tr align="center" ><td><font color:="000000"><Description1</td>
+</tr>
+ <tr align="center" ><td>Description2</td>
+</tr>
+ <tr align="center" ><td>Description3</td>
+</tr>
+    </table></center>
+  
+ 
  <center><form name="gform" id="gform" 
        enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfMzilQsiMqzMyCj6GdNrzPn1pR5AAYM-BTZdbDV3-wayc4_g/formResponse?" 
        target="hidden_iframe" onsubmit="submitted=true;">
@@ -70,7 +77,7 @@ div {
    </form></center>
    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
     </center>
-   </div>
+ 
  
  
     
