@@ -66,12 +66,61 @@ $(function(){
 .fraction span.fdn {border-top: thin solid black;}
 .fraction span.bar {display: none;}
     </style>
-    <center><h4>You purchase a butane tank that can hold gas safely up to a pressure of 38.1 atm. 
-<br>When the tank contains 100 grams of butane (C<sub>4</sub>H<sub>10</sub>) at 19.9°C, the gas exerts a pressure of 13.8 atm. 
+    <center><h4>You purchase a butane tank that can hold gas safely up to a pressure of <font color="gold">38.1 atm</font color>. 
+<br>When the tank contains 100 grams of butane (C<sub>4</sub>H<sub>10</sub>) at <font color="red">19.9°C</font color>, 
+      the gas exerts a pressure of <font color="gold">13.8 atm</font color>. 
 <br>What is the highest temperature to which the butane can be heated safely? <br>
       (Report your answer in °C) Assume that butane is an ideal gas that does not liquify.</h4>
 <br><br>  
-<center>
+<center><h3>
+We're dealing with a gas here, so keeping the Ideal Gas Law <br><br> 
+ <font color="gold">p</font color><font color="blue">V</font color> = <font color="limegreen">n</font color>R<font color="red">T</font color><br><br> 
+  in mind, is a good idea<br><br>
+  Since we're not interested in the type of gas, i.e. moles (so we don't need R either)<br>
+  and the volume remains constant, 
+  <font color="gold">p</font color><font color="blue"><s>V</s></font color> = <font color="limegreen"><s>n</s></font color><s>R</s><font color="red">T</font color>
+  we'll end up with<br><br><font color="gold">p</font color> = <font color="red">T</font color>, also called Gay-Lussac's Law<br><br>
+  Now, we can set up a ratio <br><br>
+  <div class="eq-c">
+        <div class="fraction">
+          <span class="fup">13.8 <font color="gold">atm</font color></span>
+        <span class="bar">/</span> 
+          <span class="fdn">38.1<font color="gold">atm</font color></span></div>
+          = 
+         <div class="fraction">
+          <span class="fup">19.9<font color="red"> °C</font color></span>
+        <span class="bar">/</span> 
+          <span class="fdn">x<font color="red">°C</font color></span></div><br><br>
+  
+  to make this a bit easier and cleaner, let's flip the equation<br><br>
+  
+  <div class="eq-c">
+         <div class="fraction">
+           <span class="fup">38.1 <font color="gold">atm</font color></span>
+        <span class="bar">/</span> 
+           <span class="fdn">13.8 <font color="gold">atm</font color></span></div>
+          = 
+         <div class="fraction">
+           <span class="fup">x <font color="red">°C</font color></span></span>
+        <span class="bar">/</span> 
+           <span class="fdn">19.9 <font color="red">°C</font color></span></div><br><br>
+           
+          <div class="eq-c"><font color="red">x</font color> = 
+        <div class="fraction">
+          <span class="fup">[(38.1 <font color="gold"><s>atm</s></font color>)(19.9 <font color="red"><s>°C</s></font color>)]</span>
+        <span class="bar">/</span> 
+          <span class="fdn">13.8 <font color="gold"><s>atm</s></font color></div><br><br>
+           
+  <font color="red">x</font color> = 54.94 <font color="red">°C</font color><br><br><br> 
+            The butane can be safely heated up to 54.9 °C
+  
+  </h3></center>   
+  
+  
+  
+  
+  
+  </h3></center>
 <img src="Heating100GramsButaneConfinedInGasTank.jpg" alt="Calculating Highest Temperature Of 100 Grams Butane In Gas Tank" hspace="7"style="width:1400px;height:750px;border:0">
 </center>  
   
