@@ -51,11 +51,39 @@ $(function(){
   $("#nav-placeholder").load("navigation.html");
 });
 </script> 
-
-<center><h4>A student got 42 out 58 points. What is the student's grade as a percentage?<br> Round to the nearest whole percent.</h4>
+ <style>
+    .fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+    </style>
+<center><h4>A student got 42 out 58 points. <br>What is the student's grade as a percentage?<br> Round to the nearest whole percent.</h4>
 <br><br>
-<center><img src="CalculatingStudentsGradePercentage.jpg" alt="students grade" 
-             hspace="7" style="width:1300px;height:800px;border:0"></center>
+<center><h3>
+  To answer this question, we want to use the universal percentage formula<br><br>
+  <div class="eq-c">
+      <div class="fraction">
+      <span class="fup">part</span>
+      <span class="bar">/</span>
+      <span class="fdn">whole</span></div>
+    * 100 = %</div><br><br>
+  Let's plug in the information provided<br><br>
+  <div class="fraction">
+      <span class="fup">42</span>
+      <span class="bar">/</span>
+      <span class="fdn">58</span></div>
+    * 100 = %</div><br><br>
+  0.7241(100) = 72.41 %<br><br>rounded to the nearest whole percent<br><br>
+  The student earned 72 %
+ </h3></center>
 
   
   
