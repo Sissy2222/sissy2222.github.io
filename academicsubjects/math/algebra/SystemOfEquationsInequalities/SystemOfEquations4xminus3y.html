@@ -51,11 +51,54 @@ $(function(){
   $("#nav-placeholder").load("navigation.html");
 });
 </script> 
-
-<center><h4>Solve the system of equations by graphing<br>4x - 3y = 6<br>2x + 4y = 14</h4>
+  <style>
+    .fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+    </style>
+    <center><h4>Solve the system of equations by graphing<br><font color="red">4x - 3y = 6</font color><br><font color="blue">2x + 4y = 14</font color></h4>
 <br><br>
-<center><img src="SystemOfEquations4xminus3y.jpg" alt="solving system of equations by graphing" 
-             hspace="7" style="width:1300px;height:800px;border:0"></center>
+<center><h3>
+  First, we want to rearrange each equation to fit y = mx + b<br><br>
+  <center><table><tr>
+    <td>
+  <font color="red">4x - 3y = 6</font color><br><br>
+  <font color="red"> - 3y = - 4x + 6</font color><br><br>
+ <font color="red"> y = <div class="fraction">
+      <span class="fup">4</span>
+      <span class="bar">/</span>
+   <span class="fdn">3</span></div>
+   x + <div class="fraction">
+      <span class="fup">6</span>
+      <span class="bar">/</span>
+   <span class="fdn">- 3</span></div><br><br>
+      y = <div class="fraction">
+      <span class="fup">4</span>
+      <span class="bar">/</span>
+   <span class="fdn">3</span></div> 
+   x - 2</div></font color></td>
+    <td><font color="FFFFFF"system of equations</font color></td>
+    <td>
+    <font color="blue">2x + 4y = 14</font color><br><br>  
+  <font color="blue"> 4y = - 2x + 14</font color><br><br>
+   <font color="blue">y = - <div class="fraction">
+      <span class="fup">2</span>
+      <span class="bar">/</span>
+   <span class="fdn">4</span></div>
+   x + 14</div></font color>
+  
+  
+  <img src="SystemOfEquations4xminus3y.jpg" alt="solving system of equations by graphing" 
+                 hspace="7" style="width:1300px;height:800px;border:0"></h3></center>
 
   
   
