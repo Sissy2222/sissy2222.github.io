@@ -51,11 +51,51 @@ $(function(){
   $("#nav-placeholder").load("navigation.html");
 });
 </script> 
-
+  <style>
+    .fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+    </style>
 <center><h4>A 450-g package of cheese costs $8.73.<br> What is the cost of cheese per 100 g? </h4>
 <br><br>
-<center><img src="CostOfCheese.jpg" alt="calculating cost of cheese" 
-             hspace="7" style="width:1300px;height:800px;border:0"></center>
+<center><h3>
+  The best way to solve this is by setting up a ratio<br><br>
+  450 g = $8.73 therefore, 100 g = ?<br><br>
+  <div class="eq-c">
+      <div class="fraction">
+      <span class="fup">450 g</span>
+      <span class="bar">/</span>
+      <span class="fdn">100 g</span></div>
+    = <div class="fraction">
+      <span class="fup">$8.73</span>
+      <span class="bar">/</span>
+      <span class="fdn">$x</span></div><br><br>
+    I like to have my variable (x) on the left side in the numerator,<br>so, let's flip this<br><br>
+  <div class="fraction">
+      <span class="fup">$x</span>
+      <span class="bar">/</span>
+      <span class="fdn">100 g</span></div>
+    = <div class="fraction">
+      <span class="fup">$8.73</span>
+      <span class="bar">/</span>
+      <span class="fdn">450 g</span></div><br><br>
+    and now, we solve for x<br><br>
+     x = <div class="fraction">
+    <span class="fup">($8.73)(100 <s>g</s>)</span>
+      <span class="bar">/</span>
+    <span class="fdn">450 <s>g</s></span></div><br><br>x = $1.94<br><br>100 g of this cheese will cost $1.94
+  
+  <img src="CostOfCheese.jpg" alt="calculating cost of cheese" 
+       hspace="7" style="width:1300px;height:800px;border:0"></h3></center>
 
   
   
