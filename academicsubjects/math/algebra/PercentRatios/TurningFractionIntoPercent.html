@@ -51,11 +51,55 @@ $(function(){
   $("#nav-placeholder").load("navigation.html");
 });
 </script> 
-
+  <style>
+    .fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+    </style>
 <center><h4>What is 2/5 in percentage form?</h4>
 <br><br>
-<center><img src="TurningFractionIntoPercent.jpg" alt="calculating percentage" 
-             hspace="7" style="width:1300px;height:800px;border:0"></center>
+<center><h3>
+  First, we want to turn the fraction into a decimal<br>there are two ways of doing this<br>
+  <center><table><tr>
+    <td><h3>
+      either treating the fraction as division,<br>since this is what a fraction represents<br><br>
+      <div class="fraction">
+      <span class="fup">2</span>
+      <span class="bar">/</span>
+      <span class="fdn">5</span></div>
+      = 2 : 5 = 0.4</div>
+    </td>
+    <td><font color="FFFFFF"><h3>Percentage</font color></td>
+      <td><h3>
+        or manipulating the fraction to have a denominator consisting of multiples of 10<br><br>
+      <div class="fraction">
+      <span class="fup">2</span>
+      <span class="bar">/</span>
+      <span class="fdn">5</span></div>
+      <span class="fup">4</span>
+      <span class="bar">/</span>
+      <span class="fdn">10</span></div> 
+        = 0.4</div>
+    </td>
+    </tr></table></center><br><br>
+  To get rid of a percentage sign, we divide by 100,<br>therefore,<br>to add the %, we multiply by 100<br><br>
+  0.4(100) = 40%
+  
+  
+  
+  
+  
+  <img src="TurningFractionIntoPercent.jpg" alt="calculating percentage" 
+       hspace="7" style="width:1300px;height:800px;border:0"></h3></center>
 
   
   
