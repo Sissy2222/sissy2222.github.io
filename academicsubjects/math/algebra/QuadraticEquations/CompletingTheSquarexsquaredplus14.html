@@ -51,11 +51,72 @@ $(function(){
   $("#nav-placeholder").load("navigation.html");
 });
 </script> 
-
+  <style>
+    .fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+    .radical {
+    position: relative;
+    font-size: 1.6em;
+    vertical-align: middle;
+}
+.n-root {
+    position: absolute;
+    top: -0.333em;
+    left: 0.333em;
+    font-size: 45%;
+}
+.radicand { 
+    padding: 0.25em 0.25em;
+    border-top: thin black solid;
+}
+    </style>
 <center><h4>Solve by completing the square <br>  x<sup>2</sup> + 14x - 38</h4>
 <br><br>
-<center><img src="CompletingTheSquarexsquaredplus14.jpg" alt="Complete Square For x<sup>2</sup> + 14x - 38" 
-             hspace="7" style="width:1300px;height:800px;border:0"></center>
+<center><h3>
+   First, we want to set the equation equal to zero and <br>bring the constant to the other side of the equal sign<br><br>
+  
+  x<sup>2</sup> - <font color="gold">14</font color>x - <font color="DF00FE">38</font color> = 0<br><br>
+  x<sup>2</sup> - <font color="gold">14</font color>x - ____ = <font color="DF00FE">38</font color><br><br><br>
+  Next, divide the middle term by 2 and then square it<br><br>
+  <div class="eq-c">
+     <div class="fraction">
+       <span class="fup"><font color="gold">14</font color></span>
+      <span class="bar">/</span>
+      <span class="fdn">2</span></div>
+    = <font color="gold">7</font color> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+       <font color="gold">7</font color><sup>2</sup> = <font color="3EFF15">49</font color></div><br><br>
+    Add the squared value to both sides<br><br>
+  x<sup>2</sup> - <font color="gold">12</font color>x + <font color="3EFF15">49</font color> = 
+    <font color="DF00FE">38</font color> + <font color="3EFF15">49</font color><br><br>
+    x<sup>2</sup> - <font color="gold">12</font color>x + <font color="3EFF15">49</font color> = <font color="DF00FE">87</font color><br><br><br>
+    Factor the perfect square you have created on the left side<br><br>
+    (x + 7)<sup>2</sup> = <font color="DF00FE">87</font color><br><br><br>
+    and finally, solve for x<br><br>
+    (x + 7)<sup>2</sup> = <font color="DF00FE">87</font color><br><br>
+
+ <span class="radical">&radic;</span>
+     <span class="radicand">(x + 7)<sup>2</sup></span>
+</div> = &#177;<span class="radical">&radic;</span>
+     <span class="radicand">87</span></div><br><br>
+  x + 7 = &#177; 9.33<br><br>
+  x = &#177; 9.33 - 7<br><br>
+  x<sub>1</sub> = 9.33 - 7 = 2.33<br>x<sub>2</sub> = - 9.33 - 7 = - 16.33<br><br>
+
+  
+  
+  
+  <img src="CompletingTheSquarexsquaredplus14.jpg" alt="Complete Square For x<sup>2</sup> + 14x - 38" 
+             hspace="7" style="width:1300px;height:800px;border:0"></h3></center>
 
   
   
