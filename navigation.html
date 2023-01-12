@@ -13,28 +13,38 @@
      </div> 
 
 
-   <center>
-     
-     <picture>
-  <source media="(max-width: 576px)"
-          srcset="./images/bluecurtain576.jpg">
-       
-       <source media="(max-width: 768px)"
-          srcset="./images/bluecurtain768.jpg">
-       
-  **<source media="(max-width: 922px)"
-          srcset="./images/bluecurtain922.jpg">
-       
-       <source media="(max-width: 1200px)"
-          srcset="./images/bluecurtain1200.jpg">
-       
-       <source media="(max-width: 2560px)"
-          srcset="./images/bluecurtain2560.jpg">
-       
-     </picture>
-   </center>
          </head>
  <body> 
+   
+   .img {
+  background-image: url(./images/bluecurtain1.jpg);
+}
+@media (max-width: 576px) {
+  .img {
+    background-image: url(./images/bluecurtain576.jpg);
+  }
+}
+@media (max-width: 768px) {
+  .img {
+    background-image: url(./images/bluecurtain768.jpg);
+  }
+}
+   @media (max-width: 922px) {
+  .img {
+    background-image: url(./images/bluecurtain922.jpg);
+  }
+}
+   @media (min-width: 923px) {
+  .img {
+    background-image: url(./images/bluecurtain1200.jpg);
+  }
+}
+   @media (min-width: 1210px) {
+  .img {
+    background-image: url(./images/bluecurtain2560.jpg);
+  }
+}
+   
  <br>
       
    <style>
