@@ -185,8 +185,8 @@ input:nth-of-type(6):checked ~ main#carousel{
 	 </tr></table></center></div>
 
 
-perspective: 1500px;
 
+<style>
 .book{
 	  width: 350px;
 	  height: 450px;
@@ -202,14 +202,17 @@ perspective: 1500px;
 	  display: flex;
 	  align-items: center;
 	  justify-content: center;
+	  
 }	  
 .cover{
 	  position: absolute;
 	  z-index: 1;
+	  perspective: 1500px;
 }	  
 .back-cover{
 	  position: absolute;
 	  z-index: -1;
+	  perspective: 1500px;
 }
 .page{
 	  background-color: white;
@@ -219,8 +222,9 @@ perspective: 1500px;
 	  height: 430px;
 	  border-radius: 0 15px 15px 0;
 	  margin-top: 10px;
+	  perspective: 1500px;
 }	  
-	  
+</style>	  
 
 	  
 	  <div class="book">
