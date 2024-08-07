@@ -42,17 +42,15 @@ body{
 	font-family: 'Poppins', sans-serif;
 }
 .item img{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	margin-top: 15px;
+	width: 300px;
+	height: 250px;
+
 }
 .name{
-	margin-bottom: 2px; 
-	color: #8c52ff;
+	
 }
 	.occupation{
-		margin-top: 2px;
+		
 		
 	}
 	main#carousel{
@@ -74,7 +72,7 @@ body{
 	div.item{
 		text-align: center;
 		padding: 20px;
-		border: 3px solid black;
+		border: 4px solid black;
 		border-radius: 20px;
 		background-color: #ffffff;
 		position: absolute;
@@ -102,6 +100,9 @@ div.item:nth-of-type(3){
 	}
 	div.item:nth-of-type(5){
 		--offset: 5;
+	}
+	div.item:nth-of-type(6){
+		--offset: 6;
 	}
 	input:nth-of-type(1){
 		grid-column: 2 / 3;
@@ -138,6 +139,13 @@ input:nth-of-type(4):checked ~ main#carousel{
 input:nth-of-type(5):checked ~ main#carousel{
 	--position: 5;
 }
+		input:nth-of-type(6){
+		grid-column: 7 / 8;
+		grid-row: 2 / 3;
+	}
+input:nth-of-type(6):checked ~ main#carousel{
+	--position: 6;
+}
 </style>
 
 	<input type="radio" name="position"/>
@@ -145,65 +153,27 @@ input:nth-of-type(5):checked ~ main#carousel{
 	  <input type="radio" name="position" checked/>
 	  <input type="radio" name="position"/>
 	  <input type="radio" name="position"/>
+	  <input type="radio" name="position"/>
 
 	  <main id="carousel">
 
         <div class="item">
-		<img src="./images/quadraticequationin3Dmathtutoringandhomeworkhelpatsylviatutors.online.png" 
-       alt="bright vibrant depiction of a quadratic equation in 3D" hspace="7" style="width:165px;height:165px;border:0">
-		<h3 class="name">Math</h3>
-                <p class="testimonial">Algebra I<br>Geometry<br>Algebra II<br>Trigonometry<br>Calculus</p>
+	<img src="./images/girlinchemistrylab.jpg"      alt="girl in chemistry lab with goggles">
 	</div>
         <div class="item">
-		<button class="btn btn-orange btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">	 
-		 <img src="./images/quadraticequationin3Dmathtutoringandhomeworkhelpatsylviatutors.online.png" 
-       alt="bright vibrant depiction of a quadratic equation in 3D" hspace="7" style="width:165px;height:165px;border:0">
-  <h4><b><font color="000000">Math Tutoring <br>& Homework Help</font></b></h4></button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="algebraarchive.html">
-      <center><font color="#000000"><b> Algebra I</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="geometryarchive.html">
-      <center><font color="#000000"><b> Geometry</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="algebraarchive.html">
-      <center><font color="#000000"><b> Algebra II</b></center></font color> </a></li>
-<center><font color="#FF6700"><b> Montessori Algebra</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="trigonometryarchive.html">
-      <center><font color="#000000"><b> Trigonometry</b></center></font color> </a></li>
-      <li><a class="dropdown-item" href="calculusarchive.html">
-        <center><font color="#000000"><b>Calculus</b></center></font color> </a></li>
-   </ul>
+	<img src="./images/girladmiringchemistrymodel.jpg"      alt="girl admiring ball and stick chemsitry model">
 	</div>
 	<div class="item">
-		<button class="btn btn-orange btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-   <img src="./images/chemicalstructureofcaffeinewithcupofcoffeeorganicchemistrytutoringandhomeworkhelpatsylviatutors.online.png" 
-    alt="chemical structure of caffeine escaping a cup of coffee" hspace="7" style="width:165px;height:165px;border:0">
-  <h4><b><font color="000000">Chemistry Tutoring <br>& Homework Help</font></b></h4></button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="generalchemistryarchive.html">
-      <font color="#000000"><center><b> General Chemistry</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="organicchemistryarchive.html">
-      <font color="#000000"><center><b> Organic Chemistry</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="biochemistryarchive.html">
-      <font color="#000000"><center><b> Biochemistry</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="physicalchemistryarchive.html">
-      <font color="#000000"><center><b> Physical Chemistry</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="analyticalchemistryarchive.html">
-      <font color="#000000"><center><b>Analytical Chemistry</b></center></font color> </a></li>
-    <li><a class="dropdown-item" href="instrumentalanalysisarchive.html">
-      <font color="#000000"><center><b>Instrumental Analysis</b></center></font color> </a></li>
-    </ul>
+	<img src="./images/twogirlsexperimenting.jpg"    alt="two girls ecstatically experimenting withbubbling blue liquid ">
 	</div>
 	<div class="item">
-		<img src="./images/yellowgermanenglishpaingclobatsylviatutors.online.png">
-		<h3 class="name">Elmo</h3>
-		<p class="occupation">irritator</p>
-		<p class="testimonial">Elmos' got a gun</p>
+	<img src="./images/girlbuildingmororizedvehicle.jpg"      alt="girl building motorized vehicle">
 	</div>
 	<div class="item">
-		<img src="  ">
-		<h3 class="name">Big Bird</h3>
-		<p class="occupation">smartass</p>
-		<p class="testimonial">smile</p>
+	<img src="./images/boybuildingchemistrymodel.jpg"      alt="boy inspecting ball and stick chemistry model">
+	</div>
+	<div class="item">
+	<img src="./images/girlbuildingchemistrymodel.jpg"      alt="girl building ball and stick chemistry model">
 	</div>
 </main>
 
