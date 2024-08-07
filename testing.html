@@ -183,10 +183,190 @@ input:nth-of-type(6):checked ~ main#carousel{
 
 
 
+let pages = document.getElementsByClassName("paper");
+setup(pages);
+
+function setup(elements) {
+  for (let i = 0; i < elements.length; i++) {
+    let previous = i === 0 ? null : elements[i - 1];
+    let element = elements[i];
+    let next = i === elements.length - 1 ? null : elements[i + 1];
+
+    element.addEventListener('click', () => {
+      element.classList.toggle('flipped');
+      if (element.classList.contains("flipped")) {
+        if (next !== null) {
+          next.style.zIndex++;
+        }
+        element.style.zIndex = i + 1;
+      } else {
+        element.style.zIndex = elements.length - i;
+      }
+    });
+  }
+}
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #333333;
+}
 
 
+/* Book */
+
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 3.5s;
+}
+
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+  cursor: pointer;
+}
+
+.front,
+.back {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 3.5s;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid powderblue;
+  background-color: #b3ffff;
+}
+
+.back {
+  z-index: 0;
+  background-color: #ffd699;
+}
+
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.back-content {
+  transform: rotateY(180deg)
+}
 
 
+/* Paper flip effect */
+
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+
+/* Controller Buttons */
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover i {
+  color: #636363;
+}
+
+i {
+  font-size: 50px;
+  color: gray;
+}
+
+
+/* Paper stack order */
+
+#p1 {
+  z-index: 3;
+}
+	  #p2 {
+  z-index: 2;
+}
+
+#p3 {
+  z-index: 1;
+}
+	  </style>
+
+<div id="book" class="book">
+  <div id="p1" class="paper">
+    <div class="front">
+      <div id="f1" class="front-content">
+        <h1>The Roman Empire was the post-Republican state of ancient Rome. It included territory around the Mediterranean in Europe, North Africa, and Western Asia, and was ruled by emperors. The adoption of Christianity as the state church in 380 and the
+          fall of the Western Roman Empire conventionally marks the end of classical antiquity and the beginning of the Middle Ages.</h1>
+      </div>
+    </div>
+
+    <div class="back">
+      <div id="b1" class="back-content">
+        <h1>The first two centuries of the Empire saw a period of unprecedented stability and prosperity known as the Pax Romana (lit. 'Roman Peace'). </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second page -->
+  <div id="p2" class="paper">
+    <div class="front">
+      <div id="f2" class="front-content">
+        <h1>Due to the Empire's extent and endurance, its institutions and culture had a lasting influence on the development of language, religion, art, architecture, literature, philosophy, law, and forms of government in its territories. Latin evolved
+          into the Romance languages, while Medieval Greek became the language of the East.</h1>
+      </div>
+    </div>
+
+    <div class="back">
+      <div id="b2" class="back-content">
+        <h1>he rediscovery of classical science and technology (which formed the basis for Islamic science) in medieval Europe led to the Scientific Renaissance and Scientific Revolution. Many modern legal systems, such as the Napoleonic Code, descend from
+          Roman law, while Rome's republican institutions have influenced the Italian city-state republics of the medieval period, the early United States, and modern democratic republics.
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+	  
 
 	  
 
