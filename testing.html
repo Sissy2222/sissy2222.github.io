@@ -261,7 +261,80 @@ input:nth-of-type(6):checked ~ main#carousel{
     <div class="bubble"></div>
   </div>
 
+<br><br><br>
 
+
+	  <style>
+		  .container {
+    width: 220px;
+    perspective: 1000px;
+}
+
+.carousel {
+    transform-style: preserve-3d;
+    animation: rotate 70s linear infinite;
+}
+
+.carousel figure img {
+    position: absolute;
+    width: 100%;
+    image-rendering: auto;
+    box-sizing: border-box;
+}
+
+.carousel:hover {
+    animation-play-state: paused;
+}
+
+.carousel figure img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+}
+.carousel figure img:nth-child(2) {
+    transform: rotateY(45deg) translateZ(300px);
+}
+.carousel figure img:nth-child(3) {
+    transform: rotateY(90deg) translateZ(300px);
+}
+.carousel figure img:nth-child(4) {
+    transform: rotateY(135deg) translateZ(300px);
+}
+.carousel figure img:nth-child(5) {
+    transform: rotateY(180deg) translateZ(300px);
+}
+.carousel figure img:nth-child(6) {
+    transform: rotateY(225deg) translateZ(300px);
+}
+.carousel figure img:nth-child(7) {
+    transform: rotateY(270deg) translateZ(300px);
+}
+.carousel figure img:nth-child(8) {
+    transform: rotateY(315deg) translateZ(300px);
+}
+
+@keyframes  rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+	  </style>
+
+	  <div class="container">
+        <div class="carousel">
+            <figure>
+                <img src="https://i.picsum.photos/id/1036/4608/3072.jpg?hmac=Tn9CS_V7lFSMMgAI5k1M38Mdj-YEJR9dPJCyeXNpnZc">
+                <img src="https://i.picsum.photos/id/1043/5184/3456.jpg?hmac=wsz2e0aFKEI0ij7mauIr2nFz2pzC8xNlgDHWHYi9qbc">
+                <img src="https://i.picsum.photos/id/1057/6016/4016.jpg?hmac=RjPyzbGq_MxSbghhfa1iVykXTskk9IISuzavny11_lI">
+                <img src="https://i.picsum.photos/id/128/3823/2549.jpg?hmac=VbPyA2vESva2YdoXqll9REBcbQIskgv_c-D60C1s0xc">
+                <img src="https://i.picsum.photos/id/179/2048/1365.jpg?hmac=GJyDjrvfBfjPfJPqSBd2pX6sjvsGbG10d21blr5bTS8">
+                <img src="https://i.picsum.photos/id/191/2560/1707.jpg?hmac=60dSBXsS8n-Gi2-LMtm-BfDd6Mz_JMrYI8jN4yb41qg">
+                <img src="https://i.picsum.photos/id/231/4088/2715.jpg?hmac=PxhkmiNJrVS5AgI8U-r_IsWSN5a7cTjpjIbvmtpLMDI">
+                <img src="https://i.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU">
+            </figure>
+        </div>
+    </div>
 
   
 
