@@ -247,38 +247,19 @@ input {
 	transform: rotateY(0deg);
 	transition-duration: 1.5s;
 }
+	.page label {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
 .page img {
 	width: 100%;
 	height: 100%;
 	border-radius: 15px 0 0 15px;
 }
-.front-page {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	box-sizing: border-box;
-	padding: 1rem;
-}
-.back-page {
-	transform: rotateY(180deg);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	z-index: 99;
-}
-.next, .prev {
-	position: absolute;
-	bottom: 1em;
-	cursor: pointer;
-}
-.next {
-	right: 1em;
-}
-.prev {
-	left: 1em;
-}
+
+
+
 #page1 {
 	z-index: 3;
 }
