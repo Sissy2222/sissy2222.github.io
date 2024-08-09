@@ -412,18 +412,18 @@ input {
             </div>
             <div class="back-page">
                 <img src="1.jpg">
-                <label class="prev" for="checkbox-page1"><i class="fa-chevron-left"></i></label>
+                <label class="prev" for="checkbox-page1"><i class="fa-solid fa-chevron-left"></i></label>
             </div>
         </div>
         <div class="page" id="page2">
             <div class="front-page">
                 <h2>Page 2</h2>
                 <p>Biene Maja</p>
-                <label class="next" for="checkbox-page2"><i class="fa-solid fa-leaf"></i></label>
+                <label class="next" for="checkbox-page2"><i class="fa-solid fa-chevron-right"></i></label>
             </div>
             <div class="back-page">
                 <img src="2.jpg">
-                <label class="prev" for="checkbox-page2"><i class="fas fa-chevron-left"></i></label>
+                <label class="prev" for="checkbox-page2"><i class="fa-solid fa-chevron-left"></i></label>
             </div>
         </div>
         <div class="page" id="page3">
@@ -456,186 +456,6 @@ random bullshit to test functionality and appropriate updates 1 2 3 4 5
 
 
 
-	  
-<style>
-.book {
-	width: 650px;
-	height: 350px;
-	position: relative;
-	transition-duration: 1s;
-	perspective: 1500;
-}
-input {
-	display: none;
-}
-.cover, .back-cover {
-	background-color: #ffff;
-	background-image: 
-	url("./images/derivativeandintegralsin3Dcalculustutoringandhomeworkhelpatsylviatutors.online.png");
-	width: 100%;
-	height: 100%;
-	border-radius: 0 15px 15px 0;
-	box-shadow: 0 0 5px rgb(41, 41, 41);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transform-origin: center left;
-}
-	.cover-text {
-  text-align: center;
-  position: absolute;
-  color: white;
-	}
-.cover {
-	position: absolute;
-	z-index: 4;
-	transition: transform 1s;
-}
-.cover label {
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-}
-.back-cover {
-	position: relative;
-	z-index: -1;
-}
-.page {
-	position: absolute;
-	background-color: white;
-	width: 630px;
-	height: 330px;
-	border-radius: 0 15px 15px 0;
-	margin-top: 10px;
-	transform-origin: left;
-	transform-style: preserve-3d;
-	transform: rotateY(0deg);
-	transition-duration: 1.5s;
-}
-.page img {
-	width: 100%;
-	height: 100%;
-	border-radius: 15px 0 0 15px;
-}
-.front-page {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	box-sizing: border-box;
-	padding: 1rem;
-}
-.back-page {
-	transform: rotateY(180deg);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	z-index: 99;
-}
-.next, .prev {
-	position: absolute;
-	bottom: 1em;
-	cursor: pointer;
-}
-.next {
-	right: 1em;
-}
-.prev {
-	left: 1em;
-}
-#page1 {
-	z-index: 3;
-}
-#page2 {
-	z-index: 2;
-}
-#page3 {
-	z-index: 1;
-}
-
-</style>
-
-<div class="table-responsive table-borderless">
-  <center><table class="table">
-	  <tr>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>   
-		  <td>
-
-    <div class="book">
-        <div class="cover">
-   
-        </div>
-        <div class="page" id="page1">
-            <div class="front-page">
-                <p>Warum funktioniert das nicht?<br><br>Scheisse<br><br> 
-			foul code and all is broken <br><br>and where the hell are my slider controls?!?</p>
-           
-            </div>
-            <div class="back-page">
-                <img src="1.jpg">
-          
-            </div>
-        </div>
-        <div class="page" id="page2">
-            <div class="front-page">
-                <h2>Page 2</h2>
-                <p>Biene Maja</p>
-
-            </div>
-            <div class="back-page">
-                <img src="2.jpg">
-               
-            </div>
-        </div>
-        <div class="page" id="page3">
-            <div class="front-page">
-                <h2>Page 3</h2>
-                <p>Pumuckl</p>
-            </div>
-        </div>
-        <div class="back-cover"></div>
-    </div>
-</td>
-		  <td>&nbsp; &nbsp; &nbsp;</td> 
-	  <td>
-<center><h1><b><font color="FFFFFF">Ratings & Reviews</font></b></h1></center>
-		  <center><h6>click book</h6></center>
-		  <center><h6><b>
-My longest engagement was tutoring a 3 child family, meeting almost consistently on a weekly basis from 2014 - 2024.<br><br>
-The oldest (AP chemistry and ACT prep) graduated from college some years ago.<br>
-The middle child (calculus and ACT prep (33)) spend time in England, studying at Oxford University and graduated in 2023.<br>
-The youngest (started in 5th grade, math all the way through algebra II, ACT prep (32)) is close to graduating.</b><br><br>
-Additionally, we studied subjects not covered (elected) in school, such as trigonometry, intro calculus, intro physics, <br>
-intro chemistry and a bit of German.
-	  </h6></center></td> 
-	  <td>&nbsp; &nbsp; &nbsp; &nbsp; </td> 
-	  </tr></table></center></div>
-
-
-	 <script>
-		 $(function() {
-
-  $(document).on("click", "#book .even", function(event) {
-     $("#book").turn("previous");
-  });
-
-  $(document).on("click", " #book .odd", function(event) {
-     $("#book").turn("next");
-  });
-
-});
-	 </script>
-	  
-random bullshit to test functionality and appropriate updates 1 2 3 4 5 6
-	  
-
-
-
-
-
-<br>
-	  
       
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
