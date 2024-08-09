@@ -192,83 +192,7 @@ input:nth-of-type(6):checked ~ main#carousel{
 
 	  
 
-
-	  <style>
-		  .container {
-    width: 550px;
-    perspective: 1000px;
-    padding: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-}
-
-.carousel {
-    transform-style: preserve-3d;
-    animation: rotate 70s linear infinite;
-}
-
-.carousel figure img {
-    position: absolute;
-    width: 100%;
-    image-rendering: auto;
-    box-sizing: border-box;
-}
-
-.carousel:hover {
-    animation-play-state: paused;
-}
-
-.carousel figure img:nth-child(1) {
-    transform: rotateY(0deg) translateZ(300px);
-}
-.carousel figure img:nth-child(2) {
-    transform: rotateY(45deg) translateZ(300px);
-}
-.carousel figure img:nth-child(3) {
-    transform: rotateY(90deg) translateZ(300px);
-}
-.carousel figure img:nth-child(4) {
-    transform: rotateY(135deg) translateZ(300px);
-}
-.carousel figure img:nth-child(5) {
-    transform: rotateY(180deg) translateZ(300px);
-}
-.carousel figure img:nth-child(6) {
-    transform: rotateY(225deg) translateZ(300px);
-}
-.carousel figure img:nth-child(7) {
-    transform: rotateY(270deg) translateZ(300px);
-}
-.carousel figure img:nth-child(8) {
-    transform: rotateY(315deg) translateZ(300px);
-}
-
-@keyframes  rotate {
-    0% {
-        transform: rotateY(0deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
-}
-	  </style>
-
-	  <div class="container">
-        <div class="carousel">
-            <figure>
-                <img src="./images/mathbanner.jpg">
-		    <img src="">
-                <img src="./images/colorfulchemistry.jpg">
-		     <img src="">
-                <img src="./images/colorfulbiology.jpg">
-		     <img src="">
-            </figure>
-        </div>
-    </div>
-
-<br><br><br><br><br><br> <br><br><br>   
+<br><br><br><br><br><br>
 
 
 
@@ -412,18 +336,18 @@ input {
             </div>
             <div class="back-page">
                 <img src="1.jpg">
-                <label class="prev" for="checkbox-page1"><i class="fa-solid fa-chevron-left"></i></label>
+                <label class="prev" for="checkbox-page1"><i class="fas fa-solid fa-chevron-left"></i></label>
             </div>
         </div>
         <div class="page" id="page2">
             <div class="front-page">
                 <h2>Page 2</h2>
                 <p>Biene Maja</p>
-                <label class="next" for="checkbox-page2"><i class="fa-solid fa-chevron-right"></i></label>
+                <label class="next" for="checkbox-page2"><i class="fas fa-solid fa-chevron-right"></i></label>
             </div>
             <div class="back-page">
                 <img src="2.jpg">
-                <label class="prev" for="checkbox-page2"><i class="fa-solid fa-chevron-left"></i></label>
+                <label class="prev" for="checkbox-page2"><i class=" fas fa-solid fa-chevron-left"></i></label>
             </div>
         </div>
         <div class="page" id="page3">
