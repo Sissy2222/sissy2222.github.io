@@ -197,6 +197,8 @@ input:nth-of-type(6):checked ~ main#carousel{
 	  <br><br><br>
 
 
+	  
+	  
 <style>
 .book {
 	width: 650px;
@@ -246,21 +248,39 @@ input {
 	transform-style: preserve-3d;
 	transform: rotateY(0deg);
 	transition-duration: 1.5s;
-	padding: 1rem;
-}
-	.page label {
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
 }
 .page img {
 	width: 100%;
 	height: 100%;
 	border-radius: 15px 0 0 15px;
 }
-
-
-
+.front-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.back-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 99;
+}
+.next, .prev {
+	position: absolute;
+	bottom: 1em;
+	cursor: pointer;
+}
+.next {
+	right: 1em;
+}
+.prev {
+	left: 1em;
+}
 #page1 {
 	z-index: 3;
 }
@@ -276,20 +296,20 @@ input {
 #checkbox-cover:checked ~ .book .cover {
 	transition: transform 1.5s, z-index 0.5s 0.5s;
 	transform: rotateY(-180deg);
-	
+	z-index: 1;
 }
 #checkbox-cover:checked ~ .book .page {
 	box-shadow: 0 0 3px rgb(99, 98, 98);
 }
 #checkbox-page1:checked ~ .book .page1 {
-	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transition: transform 1.5s,
 	transform: rotateY(-180deg);
-	
+	z-index: 2;
 }
 #checkbox-page2:checked ~ .book .page2 {
-	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transition: transform 1.5s,
 	transform: rotateY(-180deg);
-	
+	z-index: 3;
 }
 </style>
 
@@ -298,29 +318,60 @@ input {
 	  <tr>
 		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>   
 		  <td>
-<input type="checkbox" id="checkbox-cover">
-    <input type="checkbox" id="checkbox-page1">
-    <input type="checkbox" id="checkbox-page2">
-    <input type="checkbox" id="checkbox-page3">
-    <div class="book">
-        <div class="cover">
+          
+
+ <button id="prev-btn">
+ <i class="fa-solid fa-chevron-left"></i>
+ 
+    <div id="book" class="book">
+        <div id="co" class="cover">
             <label for="checkbox-cover"></label>
         </div>
         <div class="page" id="page1">
-                <p>Warum funktioniert das nicht?<br><br>Scheisse<br><br> 
-			foul code and all is broken <br><br>and where the hell are my slider controls?!?</p>
-                <label for="checkbox-page1"></label>
-            </div>  
+            <div class="front-page">
+                <div id="f1" class="front-content"
+                <p>Warum</p>
+            </div>
+            </div>
+            <div class="back-page">
+            <dic id="b1" class="back-content>
+                <img src="1.jpg">
+            </div>
+        </div>
+        
         <div class="page" id="page2">
+            <div class="front-page">
                 <h2>Page 2</h2>
                 <p>Biene Maja</p>
+                <label class="next" for="checkbox-page2"><i class="fas fa-solid fa-chevron-right"></i></label>
             </div>
+            <div class="back-page">
+                <img src="2.jpg">
+                <label class="prev" for="checkbox-page2"><i class=" fas fa-solid fa-chevron-left"></i></label>
+            </div>
+        </div>
         <div class="page" id="page3">
+            <div class="front-page">
                 <h2>Page 3</h2>
                 <p>Pumuckl</p>
             </div>
+        </div>
         <div class="back-cover"></div>
     </div>
+
+<button id="next-btn">
+ <i class="fa-solid fa-chevron-right"></i>
+
+
+
+
+
+</td>
+
+
+
+        
+random bullshit to test functionality and appropriate updates 1 2 3 4 5 6
 </td>
 		  <td>&nbsp; &nbsp; &nbsp;</td> 
 	  <td>
@@ -334,16 +385,10 @@ The youngest (started in 5th grade, math all the way through algebra II, ACT pre
 Additionally, we studied subjects not covered (elected) in school, such as trigonometry, intro calculus, intro physics, <br>
 intro chemistry and a bit of German.
 	  </h6></center></td> 
-	  <td>&nbsp; &nbsp; &nbsp; &nbsp; </td> <br><br>
+	  <td>&nbsp; &nbsp; &nbsp; &nbsp; </td> 
 	  </tr></table></center></div>
 	  
 random bullshit to test functionality and appropriate updates 1 2 3 4 5 6
-
-<br><br><br><br>
-
-<i class="fas fa-solid fa-chevron-left"></i>	  
-
-
 
       
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
