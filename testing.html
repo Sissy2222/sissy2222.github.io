@@ -36,79 +36,74 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   
 
 <br><br><br><br><br>
+
 <style>
-
-.container {
-    width: 850px;
-    perspective: 1000px;
-}
-
-.carousel {
-    transform-style: preserve-3d;
-    animation: rotate 70s linear infinite;
-}
-
-.carousel figure img {
+	.glass {
+    width: 200px;
+    padding: 1rem;
+    color: rgb(20, 64, 90);
+    text-align: center;
+    background: rgba(255,255,255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
     position: absolute;
-    width: 100%;
-    image-rendering: auto;
-    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.carousel:hover {
-    animation-play-state: paused;
+.glass:before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    height: 340px;
+    width: 20px;
+    background: rgba(255,255,255, 0.3);
+    filter: blur(1px);
+    box-shadow: 0 0 10px rgba(255,255,255, 0.1);
+    transform: rotate(25deg) translateX(-200px);
 }
 
-.carousel figure img:nth-child(1) {
-    transform: rotateY(0deg) translateZ(300px);
-}
-.carousel figure img:nth-child(2) {
-    transform: rotateY(45deg) translateZ(300px);
-}
-.carousel figure img:nth-child(3) {
-    transform: rotateY(90deg) translateZ(300px);
-}
-.carousel figure img:nth-child(4) {
-    transform: rotateY(135deg) translateZ(300px);
-}
-.carousel figure img:nth-child(5) {
-    transform: rotateY(180deg) translateZ(300px);
-}
-.carousel figure img:nth-child(6) {
-    transform: rotateY(225deg) translateZ(300px);
-}
-.carousel figure img:nth-child(7) {
-    transform: rotateY(270deg) translateZ(300px);
-}
-.carousel figure img:nth-child(8) {
-    transform: rotateY(315deg) translateZ(300px);
+.glass:hover {
+    animation: tilt linear 5s infinite;
 }
 
-@keyframes  rotate {
+.glass:hover:before {
+    animation: shine linear 5s infinite;
+}
+
+@keyframes  tilt {
     0% {
-        transform: rotateY(0deg);
+        transform: translate(-50%, -50%) skewY(5deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) skewY(-5deg);
     }
     100% {
-        transform: rotateY(360deg);
+        transform: translate(-50%, -50%) skewY(5deg);
     }
 }
-         
-         </style>
 
-	  <table><tr>
-		  <td><center>	  
-  <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-
-<div class="container">
-        <div class="carousel">
-            <figure>
-                <img src="./images/universities.jpg" alt="Missouri Western State Univerities Griffon, University of Missouri Tiger and University of Kansas Jayhawk">
-            </figure>
-        </div>
-    </div> </td>
-		    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-	  </tr></table></center></div>
+@keyframes  shine {
+    0% {
+        transform: rotate(25deg) translate(180px, 70px);
+    }
+    50% {
+        transform: rotate(25deg) translate(-180px);
+    }
+    100% {
+        transform: rotate(25deg) translate(180px, 70px);
+    }
+}
+</style>
 	  
+   <div class="glass">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam a ipsum tempore temporibus possimus quidem id suscipit officia similique eius. Architecto reprehenderit harum illum itaque soluta a vitae, recusandae voluptates!</p>
+    </div>
 
 
 	
