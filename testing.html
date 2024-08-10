@@ -206,78 +206,98 @@ th, td {
 		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 			 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>  
 		  <td><center>
+
+	  
 <style>
-	  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 .book {
 	width: 650px;
 	height: 350px;
 	position: relative;
-	transition: transform 0.5s;
+	transition-duration: 1s;
+	perspective: 1500;
 }
-
-
-.paper {
-   position: absolute;
+input {
+	display: none;
+}
+.cover, .back-cover {
+	background-color: #ffff;
+	background-image: 
+	url("./images/derivativeandintegralsin3Dcalculustutoringandhomeworkhelpatsylviatutors.online.png");
+	width: 100%;
+	height: 100%;
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center left;
+}
+.cover {
+	position: absolute;
+	z-index: 4;
+	transition: transform 1s;
+}
+.cover label {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.back-cover {
+	position: relative;
+	z-index: -1;
+}
+.page {
+	position: absolute;
 	background-color: white;
 	width: 630px;
 	height: 330px;
 	border-radius: 0 15px 15px 0;
 	margin-top: 10px;
-        perspective: 1500px;
-
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition-duration: 1.5s;
 }
-
-.front,
-.back {
-    background-color: FFFFFF;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-origin: left;
-    transition: transform 0.5s;
+.page img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px 0 0 15px;
 }
-
-.front {
-    z-index: 1;
-    backface-visibility: hidden;
-    border-left: 1.5px solid lightgrey;
+.front-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	padding: 1rem;
 }
-
-.back {
-    z-index: 0;
+.back-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 99;
 }
-
-.front-content,
-.back-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.next, .prev {
+	position: absolute;
+	bottom: 1em;
+	cursor: pointer;
 }
-
-.back-content {
-    transform: rotateY(180deg)
+.next {
+	right: 1em;
 }
-
-.flipped .front,
-.flipped .back {
-    transform: rotateY(-180deg);
+.prev {
+	left: 1em;
 }
-
-
-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin: 10px;
-    transition: transform 0.5s;
+#page1 {
+	z-index: 3;
+}
+#page2 {
+	z-index: 2;
+}
+#page3 {
+	z-index: 1;
 }
 
 button:focus {
@@ -293,248 +313,91 @@ i {
     color: #FF10F0;
 }
 	
-
-#p1 {
-	z-index: 7;
+	
+#checkbox-cover:checked ~ .book {
+	transform: translateX(200px);
 }
-#p2 {
-	z-index: 6;
-	}
-#p3 {
-	z-index: 5;
+#checkbox-cover:checked ~ .book .cover {
+	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transform: rotateY(-180deg);
+	z-index: 1;
 }
-#p4 {
-	z-index: 4;
+#checkbox-cover:checked ~ .book .page {
+	box-shadow: 0 0 3px rgb(99, 98, 98);
 }
-#p5 {
+#checkbox-page1:checked ~ .book .page1 {
+	transition: transform 1.5s,
+	transform: rotateY(-180deg);
+	z-index: 2;
+}
+#checkbox-page2:checked ~ .book .page2 {
+	transition: transform 1.5s,
+	transform: rotateY(-180deg);
 	z-index: 3;
 }
-#p6 {
-	z-index: 2;
-	}
-#p7 {
-	z-index: 1;
-	}
-	
- </style>
-			  
+</style>
+
+<div class="table-responsive table-borderless">
+  <center><table class="table">
+	  <tr>
+		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>   
+		  <td>
+<input type="checkbox" id="checkbox-cover">
+    <input type="checkbox" id="checkbox-page1">
+    <input type="checkbox" id="checkbox-page2">
+    <input type="checkbox" id="checkbox-page3">
+    <div class="book">
+        <div class="cover">
+            <label for="checkbox-cover"></label>
+        </div>
+        <div class="page" id="page1">
+            <div class="front-page">
+                <p>Warum funktioniert das nicht?<br><br>Scheisse<br><br> 
+			foul code and all is broken <br><br>and where the hell are my slider controls?!?</p>
+                <label class="next" for="checkbox-page1"></label>
+            </div>
+            <div class="back-page">
+                <img src="1.jpg">
+                <label class="prev" for="checkbox-page1"><i class="fas fa-arrow-circle-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page2">
+            <div class="front-page">
+                <h2>Page 2</h2>
+                <p>Biene Maja</p>
+                <label class="next" for="checkbox-page2"><i class="fas fa-arrow-circle-right"></i></label>
+            </div>
+            <div class="back-page">
+                <img src="2.jpg">
+                <label class="prev" for="checkbox-page2"><i class="fas fa-arrow-circle-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="front-page">
+                <h2>Page 3</h2>
+                <p>Pumuckl</p>
+            </div>
+        </div>
+        <div class="back-cover"></div>
+    </div>
+</td>
+		  <td>&nbsp; &nbsp; &nbsp;</td> 
+	  <td>
+<center><h1><b><font color="FFFFFF">Ratings & Reviews</font></b></h1></center>
+		  <center><h6>click book</h6></center>
+		  <center><h6><b>
+My longest engagement was tutoring a 3 child family, meeting almost consistently on a weekly basis from 2014 - 2024.<br><br>
+The oldest (AP chemistry and ACT prep) graduated from college some years ago.<br>
+The middle child (calculus and ACT prep (33)) spend time in England, studying at Oxford University and graduated in 2023.<br>
+The youngest (started in 5th grade, math all the way through algebra II, ACT prep (32)) is close to graduating.</b><br><br>
+Additionally, we studied subjects not covered (elected) in school, such as trigonometry, intro calculus, intro physics, <br>
+intro chemistry and a bit of German.
+	  </h6></center></td> 
+	  <td>&nbsp; &nbsp; &nbsp; &nbsp; </td> 
+	  </tr></table></center></div>
 	  
- 
-   <button id="next-btn">
-        <i class="fas fa-arrow-circle-right"></i>
-    </button>
-
-    
-    <div id="book" class="book">
-      
-        <div id="p1" class="paper">
-            <div class="front">
-                <div id="f1" class="front-content">
-                    <h1>Front 1</h1>
-                </div>
-            </div>
-            <div class="back">
-                <div id="b1" class="back-content">
-                    <h1>Back 1</h1>
-                </div>
-            </div>
-        </div>
-       
-        <div id="p2" class="paper">
-            <div class="front">
-                <div id="f2" class="front-content">
-                    <h1>Front 2</h1>
-                </div>
-            </div>
-            <div class="back">
-                <div id="b2" class="back-content">
-                    <h1>Back 2</h1>
-                </div>
-            </div>
-        </div>
-        
-        <div id="p3" class="paper">
-            <div class="front">
-                <div id="f3" class="front-content">
-                    <h1>Front 3</h1>
-                </div>
-            </div>
-            <div class="back">
-                <div id="b3" class="back-content">
-                    <h1>Back 3</h1>
-                </div>
-            </div>
-        </div>
-
- <div id="p4" class="paper">
-            <div class="front">
-                <div id="f4" class="front-content">
-                <p>Weshalb</p>
-            </div>
-            </div>
-            <div class="back">
-            <div id="b4" class="back-content> 
-                <img src="1.jpg">
-            </div>
-        </div>
-       </div>
-
- <div id="p5" class="paper">
-            <div class="front">
-                <div id="f5" class="front-content">
-                <p>Weswegen</p>
-            </div>
-            </div>
-            <div class="back">
-            <div id="b5" class="back-content> 
-                <img src="1.jpg">
-            </div>
-        </div>
-       </div>
-
-<div id="p6" class="paper">
-            <div class="front">
-                <div id="f6" class="front-content">
-                <p>Warum</p>
-            </div>
-            </div>
-            <div class="back">
-            <div id="b6" class="back-content> 
-                <img src="1.jpg">
-            </div>
-        </div>
-       </div>
-
-     <div id="p7" class="paper">
-            <div class="front">
-                <div id="f7" class="front-content">
-                <p>Warum</p>
-            </div>
-            </div>
-            <div class="back">
-            <div id="b7" class="back-content> 
-                <img src="1.jpg">
-            </div>
-        </div>
-       </div>
-
- </div>
-
-   
-  <button id="prev-btn">
-        <i class="fas fa-arrow-circle-left"></i>
-    </button>
-
-
-<script>
-const prevBtn = document.querySelector["#prev-btn"];
-	const nextBtn = document.querySelector["#next-btn"];
-	const book = document.querySelector["#book"];
-
-	
-	const paper1 = document.querySelector["#p1"];
-	const paper2 = document.querySelector["#p2"];
-	const paper3 = document.querySelector["#p3"];
-	const paper4 = document.querySelector["#p4"];
-	const paper5 = document.querySelector["#p5"];
-	const paper6 = document.querySelector["#p6"];
-	const paper7 = document.querySelector["#p7"];
-
-	prevBtn.addEventListener("click", goPrevPage);
-	nextBtn.addEventListener("click", goNextPage);
-
-
-	let currentLocation = i;
-        let numOfPapers = 7;
-	let maxLocation = numOfPapers + 1;
-	
-	function openBook() {
-		book.style.transform = "translateX(50%)";
-		prevBtn.style.transform = "translateX(-180px)";
-		nextBtn.style.transform = "translateX(180px)";
-	}
-	function closeBook(isAtBegining) {
-		if(isAtBegining){
-		book.style.transform = "translateX(0%)";	
-		} else{
-		book.style.transform = "translateX(100%)";	
-		}
-		
-		prevBtn.style.transform = "translateX(0px)";
-		nextBtn.style.transform = "translateX(0px)";
-	}
-	function goNextPage() {
-	if(currentLocation < maxLocation){
-		switch(currentLocation){
-			 case1: openBook();
-				paper1.classList.add["flipped"];
-				paper1.style.zIndex = 1;
-				break;
-			 case2: paper2.classList.add["flipped"];
-				paper2.style.zIndex = 2;
-				break;
-			 case3: paper3.classList.add["flipped"];
-				paper3.style.zIndex = 3;
-				break;	
-			 case4: paper4.classList.add["flipped"];
-				paper4.style.zIndex = 4;
-				break;	
-			 case5: paper5.classList.add["flipped"];
-				paper5.style.zIndex = 5;
-				break;	
-			 case6: paper6.classList.add["flipped"];
-				paper6.style.zIndex = 6;
-				break;
-			 case7: paper7.classList.add["flipped"];
-				paper7.style.zIndex = 7;
-				closeBook();
-				break;
-	default: 
-				throw new Error("unknown state");
-		}
-		currentLocation++;
-	}	
-	}
-	function goPrevPage() {
-		if(currentLocation > 1){
-			switch (currentLocation){
-	case 2:
-					closeBook();
-					paper1.classList.remove("flipped");
-					paper1.style.zIndex = 7;
-					break;
-	case 3:
-					paper2.classList.remove("flipped");
-					paper2.style.zIndex = 6;
-					break;
-	case 4:
-					paper3.classList.remove("flipped");
-					paper3.style.zIndex = 5;
-					break;
-	case 5:
-					paper4.classList.remove("flipped");
-					paper4.style.zIndex = 4;
-					break;
-	case 6:
-					paper5.classList.remove("flipped");
-					paper5.style.zIndex = 3;
-					break;
-	case 7:
-					paper6.classList.remove("flipped");
-					paper6.style.zIndex = 2;
-					break;
-	case 8:
-					paper7.classList.remove("flipped");
-					paper7.style.zIndex = 1;
-					openBook();
-					break;
-	default: 
-				throw new Error("unknown state");
-			}
-			currentLocation--;
-		}
-	}
-</script>
+random bullshit to test functionality and appropriate updates 1 2 3 4 5 6
+			  
 </center></td>
 	  <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>  
 	  </tr></table>	  
