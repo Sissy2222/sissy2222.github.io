@@ -572,77 +572,192 @@ li:nth-child(15) {
 			     
 
 <style>
-.carousel {
-  width:1000px;
-  height:300px;
+.book {
+	width: 650px;
+	height: 350px;
+	position: relative;
+	transition-duration: 1s;
+	perspective: 1500;
 }
- </style>			   
-			   
-			   
-	<br>
- <center><font color="000000"><h6><b>
-My longest engagement was tutoring a 3 child family, meeting almost consistently on a weekly basis from 2014 - 2024.<br><br>
-	The oldest (AP chemistry and ACT prep) graduated from college some years ago.<br>
-	The middle child (calculus and ACT prep (33)) spend time in England, studying at Oxford University and graduated in 2023.<br>
-	 The youngest (started in 5th grade, math all the way through algebra II, ACT prep (32)) is close to graduating.<b><br><br>
-	 Additionally, we studied subjects not covered (elected) in school, such as trigonometry, intro calculus, intro physics, <br>
-	 intro chemistry and a bit of German.</h6><br>
- </b></h6></font></center>
-	  
+input {
+	display: none;
+}
+.cover, .back-cover {
+	background-color: #ffff;
+	background-image: 
+	url("./images/derivativeandintegralsin3Dcalculustutoringandhomeworkhelpatsylviatutors.online.png");
+	width: 100%;
+	height: 100%;
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center left;
+}
+.cover {
+	position: absolute;
+	z-index: 4;
+	transition: transform 1s;
+}
+.cover label {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.back-cover {
+	position: relative;
+	z-index: -1;
+}
+.page {
+	position: absolute;
+	background-color: white;
+	width: 630px;
+	height: 330px;
+	border-radius: 0 15px 15px 0;
+	margin-top: 10px;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition-duration: 1.5s;
+}
+.page img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px 0 0 15px;
+}
+.front-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.back-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 99;
+}
+.next, .prev {
+	position: absolute;
+	bottom: 1em;
+	cursor: pointer;
+}
+.next {
+	right: 1em;
+}
+.prev {
+	left: 1em;
+}
+#page1 {
+	z-index: 3;
+}
+#page2 {
+	z-index: 2;
+}
+#page3 {
+	z-index: 1;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #7d12ff;
+}
+
+i {
+    font-size: 50px;
+    color: #FF10F0;
+}
+	
+	
+#checkbox-cover:checked ~ .book {
+	transform: translateX(200px);
+}
+#checkbox-cover:checked ~ .book .cover {
+	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+#checkbox-cover:checked ~ .book .page {
+	box-shadow: 0 0 3px rgb(99, 98, 98);
+}
+#checkbox-page1:checked ~ .book .page1 {
+	transition: transform 1.5s,
+	transform: rotateY(-180deg);
+	z-index: 2;
+}
+#checkbox-page2:checked ~ .book .page2 {
+	transition: transform 1.5s,
+	transform: rotateY(-180deg);
+	z-index: 3;
+}
+</style>
+
 <div class="table-responsive table-borderless">
-  <table class="table">
-		      <tr>		      
-		      <td>&nbsp; &nbsp; &nbsp; </td> 
-<td>
-		     <center><div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>	
-<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>	
-<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>		  
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./images/Deborahsfivestarreviewforsylviatutors.online.jpg" alt="Deborahs 5 star review for SylviaTutors.online">
+  <center><table class="table">
+	  <tr>
+		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>   
+		  <td>
+<input type="checkbox" id="checkbox-cover">
+    <input type="checkbox" id="checkbox-page1">
+    <input type="checkbox" id="checkbox-page2">
+    <input type="checkbox" id="checkbox-page3">
+    <div class="book">
+        <div class="cover">
+            <label for="checkbox-cover"></label>
+        </div>
+        <div class="page" id="page1">
+            <div class="front-page">
+               <img src="./images/marysfivestarratingforsylviatutors.online.png" alt="Marys 5 star review for SylviaTutors.online">
+                <label class="next" for="checkbox-page1"><i class="fas fa-arrow-circle-right"></i></label>
+            </div>
+            <div class="back-page">
+                <img src="1.jpg">
+                <label class="prev" for="checkbox-page1"><i class="fas fa-arrow-circle-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page2">
+            <div class="front-page">
+                <h2>Page 2</h2>
+                <p>Biene Maja</p>
+                <label class="next" for="checkbox-page2"><i class="fas fa-arrow-circle-right"></i></label>
+            </div>
+            <div class="back-page">
+                <img src="2.jpg">
+                <label class="prev" for="checkbox-page2"><i class="fas fa-arrow-circle-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="front-page">
+                <h2>Page 3</h2>
+                <p>Pumuckl</p>
+            </div>
+        </div>
+        <div class="back-cover"></div>
     </div>
-    <div class="carousel-item">
-      <img src="./images/Kevinsfivestarreviewforsylviatutors.online.jpg" alt="Kevins 5 star review for SylviaTutors.online">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/Mishawndasfivestarreviewforsylviatutors.online.jpg" alt="Mishawndas 5 star review for SylviaTutors.online">
-    </div>
- <div class="carousel-item">
-      <img src="./images/Jojosfivestarreviewforsylviatutors.online.jpg" alt="Jojos 5 star review for SylviaTutors.online">
-    </div>
-	    <div class="carousel-item">
-      <img src="./images/fivestartutoringratingforsylviatutors.online.png" alt="Mitchells 5 star review for SylviaTutors.online">
-    </div>
-	    <div class="carousel-item">
-      <img src="./images/marysfivestarratingforsylviatutors.online.png" alt="Marys 5 star review for SylviaTutors.online">
-    </div>
-	      <div class="carousel-item">
-      <img src="./images/Michellesfivestarreviewforsylviatutors.online.jpg" alt="Michelles 5 star review for SylviaTutors.online">
-    </div>
-	  	      <div class="carousel-item">
-      <img src="./images/Melissasfivestarreviewforsylviatutors.online.jpg" alt="Melissas 5 star review for SylviaTutors.online">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
- </center>
-<center><a href="https://www.sylviatutors.online/reviews.html" class="link-dark"><h4>see more reviews</h4></a>
- </center><br><br>
-</td></tr></table></div>
+</td>
+		 
+	  <td>
+<center><h1><b><font color="FFFFFF">Ratings & Reviews</font></b></h1></center>
+		  <center><h6>click book</h6></center>
+		  <center><h6><b>
+My longest engagement was tutoring a 3 child family, meeting almost consistently on a weekly basis from 2014 - 2024.<br><br>
+The oldest (AP chem & ACT prep) graduated college some years ago.<br>
+The middle child (calculus & ACT prep (33)) spend time in England, studying at Oxford University and graduated in 2023.<br>
+&nbsp; &nbsp; &nbsp;  The youngest (started in 5th grade, math all the way through algebra II, ACT prep (32)) is close to graduating.</b><br><br>
+Additionally, we studied subjects not covered (elected) in school, such as trigonometry, intro calculus, intro physics, <br>
+intro chemistry and a bit of German.<br><br>
+	<a href="https://www.sylviatutors.online/reviews.html" class="link-dark"><h6><b>See More Reviews Here</b></h6></a>		  
+	  </h6></center></td> 
+	  
+	  </tr></table></center></div>
 
        
        <br><br><br>
