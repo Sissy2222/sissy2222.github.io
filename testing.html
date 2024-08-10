@@ -50,73 +50,103 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 <br><br><br><br><br>
 
 <style>
-	.glass {
-    width: 250px;
-    padding: 1rem;
-    color: rgb(20, 64, 90);
-    text-align: center;
-    background: rgba(255,255,255, 0.2);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    overflow: hidden;
+:root {
+	--cards: 4;
+	--cardHeight: 87vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
 }
 
-.glass:before {
-    content: '';
-    position: absolute;
-    top: -40%;
-    height: 340px;
-    width: 20px;
-    background: rgba(255,255,255, 0.3);
-    filter: blur(1px);
-    box-shadow: 0 0 10px rgba(255,255,255, 0.1);
-    transform: rotate(25deg) translateX(-200px);
+.container {
+	width: 90%;
+	margin: 0 auto;
 }
 
-.glass:hover {
-    animation: tilt linear 5s infinite;
+#cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+	margin-bottom: var(--cardMargin);
 }
 
-.glass:hover:before {
-    animation: shine linear 5s infinite;
+#card1 {
+	--index: 1;
+}
+#card2 {
+	--index: 2;
+}
+#card3 {
+	--index: 3;
+}
+#card4 {
+	--index: 4;
 }
 
-@keyframes  tilt {
-    0% {
-        transform: translate(-50%, -50%) skewY(5deg);
-    }
-    50% {
-        transform: translate(-50%, -50%) skewY(-5deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) skewY(5deg);
-    }
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
 }
 
-@keyframes  shine {
-    0% {
-        transform: rotate(25deg) translate(180px, 70px);
-    }
-    50% {
-        transform: rotate(25deg) translate(-180px);
-    }
-    100% {
-        transform: rotate(25deg) translate(180px, 70px);
-    }
+#card1 .card-body {
+	background-color: #52B2CF;
+}
+#card2 .card-body {
+	/* background-color: #7EC4CF; */
+	background-color: #E5A36F;
+}
+#card3 .card-body {
+	background-color: #9CADCE;
+}
+#card4 .card-body {
+	background-color: #D4AFB9;
+}
+
+.card-body {
+	box-sizing: border-box;
+	padding: 30px;
+	border-radius: 50px;
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+	height: var(--cardHeight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+h2 {
+	font-size: 2.5em;
 }
 </style>
 	 
 	  <table><tr><center><td>
-   <div class="glass">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam a ipsum tempore temporibus possimus quidem id suscipit officia similique eius. 
-	</p>
+<div class="container">
+        <ul id="cards">
+            <li class="card" id="card1">
+                <div class="card-body">
+                    <h2>Card 1</h2>
+                </div>
+            </li>
+            <li class="card" id="card2">
+                <div class="card-body">
+                    <h2>Card 2</h2>
+                </div>
+            </li>
+            <li class="card" id="card3">
+                <div class="card-body">
+                    <h2>Card 3</h2>
+                </div>
+            </li>
+            <li class="card" id="card4">
+                <div class="card-body">
+                    <h2>Card 4</h2>
+                </div>
+            </li>
+        </ul>
     </div>
 		  </td></center></tr></table>
 
