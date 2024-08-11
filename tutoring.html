@@ -264,7 +264,96 @@ th, td {
 		  <td>&nbsp; &nbsp; &nbsp;</td>
 		  <td>
 
-	      <center></center></td>
+	      <center>
+<style>
+	.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  width: 250px;
+  height: 190px;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 10em;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: carousel 15s linear infinite; /* duration should be 3 multiplied by the total number of cards */
+}
+
+/* Increment animation delay by 3 for each card */
+.card:nth-child(1) {
+  animation-delay: -3s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0;
+}
+
+.card:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.card:last-child {
+  animation-delay: 9s;
+}
+
+@keyframes  carousel {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  3%, 20% { /* 3, 100/total number of cards */
+    transform: translateY(100%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  23%, 40% { /* [(100/total number of cards) + 3], [(100/number of cards) * 2] */
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  43%, 60% { /* [(100/total number of cards)*2 + 3], [(100/number of cards) * 3] */
+    transform: translateY(-100%) scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  63% { /* [(100/total number of cards) * 3] + 3 */
+    transform: translateY(-100%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+</style>
+
+	<div class="carousel">
+	<div class="card">1</div>
+	<div class="card">2</div>
+	<div class="card">3</div>
+	<div class="card">4</div>
+	<div class="card">5</div>
+</div>	      
+
+
+		      
+	      </center></td>
 		  
 <td>&nbsp; &nbsp; &nbsp;</td>		  
 <td> <center>
@@ -450,7 +539,7 @@ $('#gform').on('submit', function(e) {
 	
         <a href="https://www.sylviatutors.online/testpreparchive.html" class="link-light">
           <img src="./images/testpreptestsheets.png" alt="test prep tutoring" hspace="7" 
-	  style="width:235px;height:235px;border:0"></a><br></center>
+	  style="width:235px;height:235px;border:0"></a><br></center><br>
 	
      <center><a href="gedandhisettutoring.html" class="link-light">
              <font color="#000080"><h5><b><u>GED | HISET Tutoring</u></b></h5></font color></a>
@@ -555,7 +644,7 @@ $('#gform').on('submit', function(e) {
   <center><a href="physicstutoring.html" class="link-light">
           <font color="#008000"><h5><b><u>General Physics Tutoring</u></b></h5></font color></a>
 	  </center>
-       <br>
+     
     <center><font color="FFFFFF"><h1><b><u>German Tutoring</b></u></h1></font color> <br>
 	 
    <center><class="btn btn-orange"><a href="https://www.sylviatutors.online/academicsubjects/german/archive.html" class="link-light">
