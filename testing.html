@@ -91,16 +91,16 @@ th, td {
 }
 
 #card1 .card-body {
-	background-color: #00FFFF;
+	background-color: #39ff14;
 }
 #card2 .card-body {
-	background-color: #39ff14;
+	background-color: #7d12ff;
 }
 #card3 .card-body {
 	background-color: #FF10F0;
 }
 #card4 .card-body {
-	background-color: #7d12ff;
+	background-color: #00FFFF;
 }
 
 .card-body {
@@ -184,10 +184,61 @@ th, td {
 
 
 
-
- <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><h6><b>email</b></h6>
+<div class="dropdown">
+ <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><h6><b>email</b></h6>
  </button>
-     
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" .glass {
+  width: 250px;
+    padding: 1rem;
+    color: rgb(20, 64, 90);
+    text-align: center;
+    background: rgba(255,255,255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+
+    overflow: hidden;
+}
+
+</style>
+
+<center>
+	<div class="container">
+ <div class="glass">
+        <p>
+		<center>
+   <form name="gform" id="gform" 
+       enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSc46T9rwLZQkzDonHEmcvdRluTeuKwzfiodjzVK9P1AIy_XEg/formResponse?" 
+       target="hidden_iframe" onsubmit="submitted=true;">
+   <h3><b>Your Name</b></h3> 
+  <input type="text" name="entry.1271877426" id="entry.1271877426"><br><br> 
+   <h3><b>Your Email</b></h3>
+  <input type="text" name="entry.15336561" id="entry.15336561"><br><br>
+   <h3><b>Questions? Suggestions!</b></h3>
+     <textarea rows="3" cols="26" name="entry.1296284450" id="entry.1296284450"></textarea><br><br>
+   <button id="btn" type="submit">Submit</button>
+   </form></center>
+   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
+    </center>
+	</p>
+    </div>
+	</div></a>
+	
+</div>	
+</div> 
+
+
+
+
+
+
+	  
+
+
+
+	  
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" 
