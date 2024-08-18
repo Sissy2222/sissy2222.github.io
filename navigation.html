@@ -131,7 +131,7 @@ body, html {
     background: rgba(255, 255, 255, 0.3);
 }
 
-button {
+button1 {
     margin: 10px;
     width: 40%;
     padding: 10px;
@@ -143,7 +143,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button1:hover {
     background: linear-gradient(45deg, #5d5e5d, #a4a4a7);
 }
 </style>	
@@ -164,21 +164,21 @@ button:hover {
             <center>
             <div class="input-group">
                 <label><b>Your Name</b></label>
-                <input type="text" placeholder="what do I call you" name="name">
+                <input type="text" placeholder="what do I call you" name="name" required="">
             </div>
 		
             <div class="input-group">
                 <label><b>Your Email</b></label>
-                <input type="email" placeholder="email address" name="email">
+                <input type="email" placeholder="email address" name="email" required="">
             </div>
 
 		   <div class="input-group">
                 <label><b>What troubles?</b></label>
-                <input textarea rows="3" cols="26" placeholder="what's on your mind" name="because">
+                <input textarea rows="3" cols="26" placeholder="what's on your mind" name="because" required="">
             </div>
 		</center>
 		
-            <center><button type="submit">Submit</button></center>
+            <center><button1 type="submit">Submit</button1></center>
         </form>
 	</div>
   </div>
