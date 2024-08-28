@@ -156,7 +156,7 @@ body, html {
   <div id="myDropdown" class="dropdown-content">
 		  
 	<div class="container">
-        <form name="gform" id="gform" 
+        <form name="nav" id="nav" 
 		  action="https://formspree.io/f/xjkbevoz" method="POST">
 	
             <center>
@@ -177,6 +177,7 @@ body, html {
 		</center>
 		
             <center><button class="submit-button" type="submit">Submit</button></center>
+		<p id="navstatus"></p>
         </form>
 	</div>
   </div>
@@ -185,17 +186,50 @@ body, html {
 	  </center>
  
 	
-		
-<script type="text/javascript">var submitted=false;</script>
+<script>		
+var form = document.getElementById("nav");
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("navstatus");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+  method: form.method,
+  body: data,
+  headers: {
+    'Accept': 'application/json'
+}
+}).then(response => {
+  if (response.ok) {
+    status.innerHTML = "Got it!<br><br> I will get back with you shortly";
+    form.reset()
+  } else {
+    response.json().then(data => {
+    if (Object.hasOwn(data, 'errors')) {
+      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+    } else {
+      status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo"
+    }
+  })
+}
+}).catch(error => {
+  status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo"
+});
+}
+form.addEventListener("submit", handleSubmit)
+	</script>	  
+	  
+	  
+	  
+	  
+	  
+	 
 
-	 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend(<font color="FFFFFF"><h1><b>'Got it!<br><br> I will get back with you shortly'</b></h1></font color>);
-  });
-</script>  
-
-	<script> 
+	
+	 
+	 
+	 
+	 
+	 <script> 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
