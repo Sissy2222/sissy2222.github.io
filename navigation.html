@@ -201,7 +201,7 @@ fetch(event.target.action, {
 }).then(response => {
   if (response.ok) {
 $('#nav *').fadeOut(2000);
-  status.innerHTML = "Got it!<br> I will get back with you shortly";
+$('#gform').prepend(<font color="FFFFFF"><h1><b>'Got it!<br><br> I will get back with you shortly'</b></h1></font color>); 
 	  
     
   } else {
