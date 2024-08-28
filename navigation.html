@@ -201,14 +201,14 @@ fetch(event.target.action, {
 }
 }).then(response => {
   if (response.ok) {
-    status.innerHTML = <font color="000000"><h1><b>"Got it!<br><br> I will get back with you shortly"</b></h1></font color>;
+    status.innerHTML = "<font color="000000"><h1><b>Got it!<br> I will get back with you shortly</b></h1></font color>";
     form.reset()
   } else {
     response.json().then(data => {
     if (Object.hasOwn(data, 'errors')) {
       status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
     } else {
-      status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo";
+      status.innerHTML = "Oops! Something went wrong...<br>could I get a redo";
     }
   })
 }
