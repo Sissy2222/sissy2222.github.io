@@ -201,7 +201,7 @@ fetch(event.target.action, {
 }
 }).then(response => {
   if (response.ok) {
-    status.innerHTML = "Got it!<br><br> I will get back with you shortly";
+    status.innerHTML = <font color="000000"><h1><b>"Got it!<br><br> I will get back with you shortly"</b></h1></font color>;
     form.reset()
   } else {
     response.json().then(data => {
