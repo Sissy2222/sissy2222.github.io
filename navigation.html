@@ -207,29 +207,19 @@ fetch(event.target.action, {
     if (Object.hasOwn(data, 'errors')) {
       status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
     } else {
-      status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo"
+      status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo";
     }
   })
 }
 }).catch(error => {
-  status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo"
+  status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo";
 });
 }
 form.addEventListener("submit", handleSubmit)
 	</script>	  
 	  
 	  
-	  
-	  
-	  
-	 
-
-	
-	 
-	 
-	 
-	 
-	 <script> 
+ <script> 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
