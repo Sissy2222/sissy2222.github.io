@@ -200,11 +200,8 @@ fetch(event.target.action, {
 }
 }).then(response => {
   if (response.ok) {
-
-$('#nav').on('submit', function(e) {
-  $('#nav *').fadeOut(2000);
-  $('#nav').prepend(<font color="FFFFFF"><h1><b>'Got it!<br><br> I will get back with you shortly'</b></h1></font color>);
-  });
+form.fadeOut(2000);
+  status.innerHTML = "Got it!<br> I will get back with you shortly";
 	  
     
   } else {
