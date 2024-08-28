@@ -200,7 +200,12 @@ fetch(event.target.action, {
 }
 }).then(response => {
   if (response.ok) {
-    status.innerHTML = "Got it!<br> I will get back with you shortly";
+
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend(<font color="FFFFFF"><h1><b>'Got it!<br><br> I will get back with you shortly'</b></h1></font color>);
+  });
+	  
     form.reset()
   } else {
     response.json().then(data => {
