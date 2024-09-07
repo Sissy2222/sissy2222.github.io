@@ -838,17 +838,17 @@ intro chemistry and a bit of German.<br><br>
 		<h5><b>Conversational English & Conversational German</h5><b>
 		<h6><b>Meet like-minded people to practice & perfect your skills</b></h6><br>
 		    
-	    <button type="button" class="btn btn-light btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modal1">
+	    <button type="button" class="btn btn-light btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       <h3>Get In Touch</h3></button></center>
      
 
 <!-- Modal -->
-<div class="modal fade" id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" 
+<div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" 
      aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-   <h4 class="modal-title modal-title-centered" id="modal1"><b>KaffeeKlatsch</b></h4>
+   <h4 class="modal-title modal-title-centered" id="modal"><b>KaffeeKlatsch</b></h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -861,34 +861,60 @@ intro chemistry and a bit of German.<br><br>
   color:white;
 }  
     </style> 
-  <center><table class="bg1">
+  <center><table class="bg">
  <tr align="center"><td>
  <center>
-    <center><form name="gform" id="gform" 
-       enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScZZKitFGiQzr3EzMvwSCihpVH67NP7cqc2mkx70Wd-XHoZ5Q/formResponse?" 
-       target="hidden_iframe" onsubmit="submitted=true;">
+    <center><form name="klatsch" id="klatsch" 
+		  action="https://formspree.io/f/xjkbevoz" method="POST">
    <h1><b>Your Name</b></h1> 
-   <input type="text" name="entry.433491627" id="entry.433491627"><br><br> 
+   <input type="text" name="name"><br><br> 
    <h1><b>Your Email</b></h1>
-   <input type="text" name="entry.1778412046" id="entry.1778412046"><br><br>
+   <input type="text" name="email"><br><br>
    <h1><b>Language(s)</b></h1>
-   <input type="text" name="entry.450281368" id="entry.450281368"><br><br>
+   <input type="text" name="language"><br><br>
    <h1><b>Tell Me More</b></h1>
-     <textarea rows="2" cols="30" name="entry.1970283876" id="entry.1970283876"></textarea><br><br>
+     <textarea rows="2" cols="30" name="info"></textarea><br><br>
    <button id="btn" type="submit">Submit</button>
+	       <p id="klatschstatus"></p>
    </form></center>
-   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
     </center>
     </td></tr>
     </table></center>  
         
-       <script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('<center>Got it!<br><br> I will get back with you shortly</center>');
-  });
-</script>    
+<script>		
+var form = document.getElementById("klatsch");
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("klatschstatus");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+  method: form.method,
+  body: data,
+  headers: {
+    'Accept': 'application/json'
+}
+}).then(response => {
+  if (response.ok) {
+	  
+$('#klatsch *').fadeOut(2000);
+status.innerHTML = "Got it!<br> I will get back with you shortly"; 
+	  
+    
+  } else {
+    response.json().then(data => {
+    if (Object.hasOwn(data, 'errors')) {
+      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+    } else {
+      status.innerHTML = "Oops! Something went wrong...<br>could I get a redo";
+    }
+  })
+}
+}).catch(error => {
+  status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo";
+});
+}
+form.addEventListener("submit", handleSubmit)
+	</script>  
 	
 	   </td></tr></table></div></div>
    </div>
