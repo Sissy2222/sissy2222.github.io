@@ -404,31 +404,58 @@ border="0" width="240" height="330"  alt="android secretary"/></a><br><h4><b>Pos
   <center><table class="bg">
  <tr align="center"><td><br><br><br><br><br><br><br>
  <center>
-    <center><form name="gform" id="gform" 
-       enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeU8e8jOOGBziDrrNQ_NLSGbx9pni6SO0eulEFSRzu_kQndtg/formResponse?" 
-       target="hidden_iframe" onsubmit="submitted=true;">
+    <center><form name="homework" id="homework" 
+		  action="https://formspree.io/f/xjkbevoz" method="POST">
    <br><br><h3><b>Your Name</b></h3> 
-   <input type="text" name="entry.438351383" id="entry.438351383"><br><br> 
+   <input type="text" name="name"><br><br> 
    <h3><b>Your Email</b></h3>
-  <input type="text" name="entry.1594111988" id="entry.1594111988"><br><br>
+  <input type="text" name="email"><br><br>
   <h3><b>What Troubles</b></h3>
-   <input type="text" name="entry.899407609" id="entry.899407609"><br><br>
+   <input type="text" name="specifics"><br><br>
    <h3><b>Post Question(s)</b></h3>
-     <textarea rows="3" cols="45" name="entry.1783622609" id="entry.1783622609"></textarea><br><br>
+     <textarea rows="3" cols="45" name="question"></textarea><br><br>
    <button id="btn" type="submit">Submit</button>
+	     <p id="homeworkstatus"></p>
    </form></center>
-   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> 
     </center>
     </td></tr>
     </table></center>  
         
-       <script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('<center>Got it!<br><br> I will get back with you shortly</center>');
-  });
-</script>    
+  <script>		
+var form = document.getElementById("homework");
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("homeworkstatus");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+  method: form.method,
+  body: data,
+  headers: {
+    'Accept': 'application/json'
+}
+}).then(response => {
+  if (response.ok) {
+	  
+$('#homework *').fadeOut(2000);
+status.innerHTML = "Got it!<br> I will get back with you shortly"; 
+	  
+    
+  } else {
+    response.json().then(data => {
+    if (Object.hasOwn(data, 'errors')) {
+      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+    } else {
+      status.innerHTML = "Oops! Something went wrong...<br>could I get a redo";
+    }
+  })
+}
+}).catch(error => {
+  status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo";
+});
+}
+form.addEventListener("submit", handleSubmit)
+	</script>
+  
       
     </td></tr></table></div></div>
    </div>
