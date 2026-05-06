@@ -744,15 +744,20 @@ i {
 #checkbox-cover:checked ~ .book .page {
 	box-shadow: 0 0 3px rgb(99, 98, 98);
 }
-#checkbox-page1:checked ~ .book .page1 {
-	transition: transform 1.5s,
+#checkbox-page1:checked ~ .book #page1 {
+	transition: transform 1.5s;
 	transform: rotateY(-180deg);
 	z-index: 2;
 }
-#checkbox-page2:checked ~ .book .page2 {
-	transition: transform 1.5s,
+#checkbox-page2:checked ~ .book #page2 {
+	transition: transform 1.5s;
 	transform: rotateY(-180deg);
 	z-index: 3;
+}
+	#checkbox-page3:checked ~ .book #page3 {
+	transition: transform 1.5s;
+	transform: rotateY(-180deg);
+	z-index: 4;
 }
 </style>
 <br>
@@ -761,10 +766,11 @@ i {
 	  <tr>
 		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>   
 		  <td>
-<input type="checkbox" id="checkbox-cover">
+    <input type="checkbox" id="checkbox-cover">
     <input type="checkbox" id="checkbox-page1">
     <input type="checkbox" id="checkbox-page2">
     <input type="checkbox" id="checkbox-page3">
+    <input type="checkbox" id="checkbox-page4">
     <div class="book">
         <div class="cover">
             <label for="checkbox-cover"></label>
