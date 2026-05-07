@@ -203,37 +203,25 @@ fetch(event.target.action, {
 }).then(response => {
   if (response.ok) {
 	  
-// 1. Hide the input fields so the message is clear
-      form.querySelectorAll('.input-group, .submit-button').forEach(el => {
-        el.style.display = 'none';
-      });
-
-      // 2. Show the success message
-      status.innerHTML = "Got it!<br>I will get back with you shortly";
-      status.style.color = "#63DEFD"; // Matching your button color
-
-      // 3. WAIT 3 seconds, then close the dropdown and reset
-      setTimeout(() => {
-        dropdown.classList.remove("show"); 
-        
-        // Optional: Reset form for next time
-        form.reset();
-        form.querySelectorAll('.input-group, .submit-button').forEach(el => {
-          el.style.display = 'block';
-        });
-        status.innerHTML = "";
-      }, 3000);
-
+$('#nav *').fadeOut(2000);
+status.innerHTML = "Got it!<br> I will get back with you shortly"; 
+	  
+    
+  } else {
+    response.json().then(data => {
+    if (Object.hasOwn(data, 'errors')) {
+      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
     } else {
-      status.innerHTML = "Oops! Could I get a redo?";
+      status.innerHTML = "Oops! Something went wrong...<br>could I get a redo";
     }
-  }).catch(error => {
-    status.innerHTML = "Oops! Something went wrong.";
-  });
+  })
 }
-
-form.addEventListener("submit", handleSubmit);
-	</script>	  
+}).catch(error => {
+  status.innerHTML = "Oops! Something went wrong...<br><br>could I get a redo";
+});
+}
+form.addEventListener("submit", handleSubmit)
+	</script>  
 	  
 	  
  <script> 
