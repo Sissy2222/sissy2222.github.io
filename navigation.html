@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <style>
-        /* General Styles */
+     
         h1 {
             text-shadow: 2px 2px 4px #282828;
             color: #FFFFFF;
@@ -77,25 +77,7 @@
             cursor: pointer;
         }
 
-        /* Hero & Navigation Table Styles */
-        .hero-image {
-            background-image: url("./images/learningbanner2.png");
-            height: 65vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        table { 
-            border-collapse: separate; 
-            border-spacing: 20px; 
-        }
-        th, td { padding: 10px; text-align: center; }
-        .link-light { text-decoration: none; }
-    </style>
+      
 </head>
 
 <body>
@@ -129,10 +111,40 @@
 
     <br>
 
-    <!-- Banner & Navigation -->
-    <div class="hero-image">
+   <div class="hero-container" style="position: relative; width: 100%;">
+    
+    <style>
+        .hero-image-box {
+            /* This is your background/banner */
+            background-image: url("./images/sylviatutors.onlinelearningbanner2.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%; /* Forces the image to fill the container */
+            min-height: 300px; /* Adjust this to the natural height of your banner */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-table { 
+            border-collapse: separate; 
+            border-spacing: 20px; 
+            background: rgba(0, 0, 0, 0.1); /* Optional: slight tint to make links pop */
+        }
+
+        .nav-table h1 {
+            text-shadow: 2px 2px 4px #282828;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        .link-light { text-decoration: none; }
+    </style>
+
+    <div class="hero-image-box">
         <div class="table-responsive">
-            <table class="table table-borderless">
+            <table class="nav-table">
                 <tr>
                     <td><a href="index.html" class="link-light"><h1><b>Home</b></h1></a></td>
                     <td><a href="tutoring.html" class="link-light"><h1><b>Tutoring</b></h1></a></td>
@@ -143,7 +155,7 @@
             </table>
         </div>
     </div>
-
+</div>
     <!-- Scripts -->
     <script>
         function toggleDropdown() {
